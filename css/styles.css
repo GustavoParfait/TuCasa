@@ -17,6 +17,8 @@ html {
 
 body {
     font-family: var(--fountPrincipal);
+    font-size: 1.6rem;
+    line-height: 1.8;
 }
 
 h1, h2, h3 {
@@ -70,9 +72,109 @@ img {
     text-align: center;
 }
 
-.marginT {
+.marginT5 {
     margin-top: 5rem;
 }
 
 /*--------------Globals, Utilities and Reset end----------*/
+/*----------header start----------*/
+.header {
+    min-height: 60rem;
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 0;
+}
 
+@media (min-width: 768px) { 
+    .header {
+        padding: 2rem;
+    }
+}
+
+.headerContent {
+    display: flex;
+    flex-direction: column;
+    height: calc(60rem - 4rem);
+    justify-content: space-between;
+    color: var(--white);
+}
+
+.siteName {
+    font-weight: 300;
+    text-align: center;
+    font-size: 3rem;
+}
+
+@media (min-width: 768px) { 
+    .siteName {
+        font-size: 5rem;
+    }
+}
+
+.siteName span {
+    font-weight: 900;
+}
+
+@media (min-width: 768px) { 
+    .bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) { 
+    .contact {
+        align-items: flex-end;
+    }
+}
+
+.phone {
+    display: flex;
+}
+
+.phone::before {
+    content: '';
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    background-image: url(../img/telefono.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-right: 1rem;
+}
+
+.header a {
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) { 
+    .navigation {
+        flex-direction: row;
+    }
+}
+
+.navigation a{
+    padding: 1rem 2rem;
+    transition: background-color 300ms;
+}
+
+.navigation a:hover {
+    background-color: rgb(255 255 255 / .3);
+}
+/*----------header end----------*/
